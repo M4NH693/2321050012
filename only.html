@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang của tôi</title>
+  <meta name="description" content="Mô tả ngắn về trang" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    /* CSS cơ bản để nhìn gọn gàng */
+    :root { font-family: system-ui, Arial, sans-serif; }
+    body { margin: 0; line-height: 1.6; }
+    header, footer { padding: 16px; background: #f5f5f5; }
+    main { padding: 16px; max-width: 900px; margin: auto; }
+    a { text-decoration: none; }
+    nav a { margin-right: 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Xin chào 👋</h1>
+    <nav>
+      <a href="#">Trang chủ</a>
+      <a href="#gioi-thieu">Giới thiệu</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="gioi-thieu">
+      <h2>Giới thiệu</h2>
+      <p>Đây là trang HTML cơ bản. Bạn có thể chỉnh sửa nội dung tùy ý.</p>
+      <button id="btn">Nhấn tôi</button>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 – Tên của bạn
+  </footer>
+
+  <script>
+    // JS nhỏ để demo tương tác
+    document.getElementById('btn').addEventListener('click', () => {
+      alert('Bạn vừa nhấn nút!');
+    });
+  </script>
+</body>
