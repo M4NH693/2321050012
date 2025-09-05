@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+}
+ header img{
+   display: block;
+   margin: 0 auto;
+}
+
+nav{
+    background-color: #0c4ca3;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.danhmuc_lienket a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: Roboto, Arial, Tahoma;font-family: Roboto, Arial, Tahoma;
+    border-right:1px solid gray ;
+}
+li{
+    padding: 15px;
+}
+.a{
+    border-right:1px solid gr ;
+}
+.banner-qc{
+    display: flex;
+    justify-content: center ;
+
+}
+.qc{
+    display: flex;
+    justify-content: space-between;
+    
+}
+header{
+    border-bottom: 10px solid gray;
+}
+.tin{
+    font-family: Roboto, Arial, Tahoma;font-family: Roboto, Arial, Tahoma;
+    border-bottom: 3px solid blue ;
+    color: blue;
+    margin: 10px 160px;
+}
+.bd{
+    border-bottom: 10px solid gray;
+    display: flex;
+    justify-content: center;
+}
+.them{
+    margin-right: 50px;
+}
+
+
+
+
