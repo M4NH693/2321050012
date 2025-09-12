@@ -2,6 +2,13 @@ body{
     margin: 0;
     background-color: black; 
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+main {
+    height: calc(100vh - 80px); 
 }
 
 .container{
@@ -33,16 +40,22 @@ body{
 .container_main{
     display: flex;
     gap: 5px;
+   height: 100%;
     
 }
 .container_main_left{
     background-color: #121212;
     width: 20%;
-    height: auto;
+    height: 100%;
     border-radius: 15px;
     color: white;
     justify-content: space-around;
+    overflow: scroll;
+    scrollbar-width: none;
+
 }
+
+
 .congcu{
     display: flex;
     justify-content: space-around;
@@ -83,6 +96,9 @@ body{
     width: 50%;
     height: auto;
     border-radius: 15px;
+    overflow-y:scroll;
+    scrollbar-width: none;
+  
 }
 
 .content_box img{
@@ -176,8 +192,15 @@ body{
 
 
 .container_ft{
+    position: fixed;
     background-color: black;
-    height: 100px;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+
+
 }
 .left {
     display: flex;
