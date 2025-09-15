@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body{
+    background-color: #131314;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    
+
+}
+
+.all{
+    max-width: 80%;
+    
+}
+
+header {
+    background-color: black;
+    width: 100%;  
+    padding: 30px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.boxh {
+    max-width: 1200px;   
+    margin: 0 auto;    
+    display: flex;
+    gap: 230px;
+
+}
+
+
+.trai{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+
+}
+
+.trai img{
+    width: 90px;
+    height: 30px;
+}
+
+.phai{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.phai .ora{
+    background-color: #FF5833;
+    border-radius: 10px;
+    padding: 8px 16px;
+    
+    
+    
+}
+
+main{
+    /* height: calc(100vh - 80px); */
+    margin-top: 80px;
+}
+
+
+.box1 img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.box2 img{
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.box3 img{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.listfilm{
+    display: flex;
+    gap:10px;
+    overflow-x:scroll;
+    scrollbar-width: none;
+    border-radius: 10px;
+}
+
+.listfilm img {
+    border-radius: 10px;
+}
+.listfilm img:hover{
+  opacity: 0.7;
+}
+
+hr{
+    margin-top: 30px;
+   
+}
+
+.cot1{
+    margin-top: 30px;
+}
+
+.anh1 img{
+    width:120px ;
+    height: 29px;
+}
+.container_f{
+    display: flex;
+    gap: 100px;
+    font-size:15px;
+}
+
+.cot2{
+    margin-top: 30px;
+}
+
+.cot3{
+    margin-top: 30px;
+}
+
+.cot4{
+    margin-top: 30px;
+}
+.tf{
+    margin-bottom: 10px;
+    color: gray;
+    font-size:13px;
+}
+
+
+
+
+
+
