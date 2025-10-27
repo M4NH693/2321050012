@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+
+
+
+        // function nhapten() {
+        //     let n = prompt("nhap ho ten cua ban:")
+        //     document.writeln(n)
+        // }
+
+        // nhapten()
+        n = parseInt(prompt("nhap vao 1 so : "));
+       if(!n){
+        document.writeln("kkk")
+       }
+       function loop(){
+        for(let i = 0; i < n ; i++){
+            document.writeln("xin chao "+ (i + 1)+ "<br>");
+        }
+       }
+       loop(n);
+    </script> -->
+
+
+    <P>nhập vào họ tên</P>
+    <input type="text" id="hoTen">
+    <button>nhập</button>
+
+
+    <h1>tính tổng</h1>
+    <div>
+        <label for="">nhập số thứ nhất</label>
+        <input type="text" id="mot">
+    </div>
+
+    <div>
+        <label for="">nhập số thứ hai</label>
+        <input type="text" id="hai">
+    </div>
+    <button onclick="tinhtong()">tính</button>
+    <label for="">kết quả: </label>
+    <input type="text" id="ketqua">
+
+
+    <script>
+
+
+        function tinhtong() {
+            let a = parseFloat(document.getElementById('mot').value);
+            let b = parseFloat(document.getElementById('hai').value);
+
+            if(isNaN(a) || isNaN(b)){
+                alert("vui lòng nhập đủ đầu vào")
+            }
+
+
+            let kq = a + b
+            document.getElementById('ketqua').value = kq
+
+        }
+
+
+        // tinh diem chu a,b,c tinh diem so roi doi sang diem chu
+    </script>
+</body>
+
+</html>

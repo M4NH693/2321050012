@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>tính điểm</h1>
+
+    <div>
+        <label for="">nhập điểm A: </label>
+        <input type="text" id="A">
+    </div>
+
+    <div>
+        <label for="">nhập điểm B: </label>
+        <input type="text" id="B">
+    </div>
+
+    <div>
+        <label for="">nhập điểm C: </label>
+        <input type="text" id="C">
+    </div>
+
+    <div>
+        <label for="">Kết quả : </label>
+        <input id="ketqua">
+        <button onclick="tinhdiem()">tính</button>
+    </div>
+
+    <div>
+        <label for="">Quy đổi sang chữ</label>
+        <input type="text" id="quydoi">
+    </div>
+    <script>
+        function tinhdiem() {
+            let A = parseFloat(document.getElementById('A').value)
+            let B = parseFloat(document.getElementById('B').value)
+            let C = parseFloat(document.getElementById('C').value)
+
+            if (isNaN(A) || isNaN(B) || isNaN(C)) {
+                alert("vui lòng nhập đủ đầu vào!")
+                return;
+            }
+
+            let diem = A * 0.6 + B * 0.3 + C * 0.1;
+            document.getElementById('ketqua').value = diem;
+
+            if(A <= 10 && B <= 10 && C <= 10){
+                 if (diem >= 8 && diem <= 10) {
+                document.getElementById("quydoi").value = "A";
+            } else if (diem >= 7 && diem < 8) {
+                 document.getElementById("quydoi").value = "B";
+
+            } else if (diem >= 5 && diem < 7) {
+                 document.getElementById("quydoi").value = "C";
+
+            } else if (diem >= 4 && diem < 5) {
+                document.getElementById("quydoi").value = "D";
+            } else {
+                document.getElementById("quydoi").value = "wrongbibi";
+            }
+            }else{
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
