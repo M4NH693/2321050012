@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+
+        }
+
+        .anh {
+            width: 300px;
+        }
+
+        .a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btna {
+            border-radius: 10px;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+    <div class="container">
+        <h1>ví dụ về thay đổi chế độ</h1>
+        <img src="pngtree-sun-clipart-cartoon-expression-cute-sun-material-illustration-png-image_2389801.jpg" alt=""
+            class="anh">
+        <div class="a">
+            <div>
+                <h1>chế độ sáng</h1>
+            </div>
+            <div>
+                <button class="btna" onclick="doichedo()">thay đổi chế độ</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        let cheDo = true
+
+        function doichedo() {
+            // light -> chDo = false
+            if (cheDo) {
+                document.getElementsByTagName('body')[0].style = ' background-color: black'
+                document.getElementsByTagName('h1')[0].style = ' Color : yellow'
+                document.getElementsByTagName('h1')[1].style = ' Color : red'
+                document.getElementsByTagName('h1')[1].innerHTML = 'Chế độ tối'
+                document.getElementsByClassName('anh')[0].src = 'images.jfif'
+                cheDo = false
+            }else{
+                 document.getElementsByTagName('body')[0].style = ' background-color: while'
+                document.getElementsByTagName('h1')[0].style = ' Color : black'
+                document.getElementsByTagName('h1')[1].style = ' Color : black'
+                document.getElementsByTagName('h1')[1].innerHTML = 'Chế độ sáng'
+                document.getElementsByClassName('anh')[0].src = 'pngtree-sun-clipart-cartoon-expression-cute-sun-material-illustration-png-image_2389801.jpg'
+                cheDo = true
+            }
+        }
+    </script>
+</body>
+
+</html>

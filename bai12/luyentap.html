@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .anh{
+        height: 250px;
+        width: 300px;
+        border-radius: 20px;
+    }
+    .container{
+        display: flex;
+        background-color: aqua;
+        padding: 30px;
+        border-radius: 20px;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+</style>
+
+<body>
+    
+        <div class="container">
+            <div class="trai">
+                <div>
+                <label for="kg">Nhập cân nặng: </label>
+                <input type="text" id="kg">
+            </div>
+
+            <div>
+                <label for="chieuCao">Nhập chiều cao: </label>
+                <input type="text" id="chieuCao">
+            </div>
+
+            <div>
+                <label for="BMI">Chỉ Số BMI</label>
+                <input id="kq" readonly>
+            </div>
+            </div>
+            <div class="phai">
+                <img src="chiu.png" alt="" class="anh">
+                <div class="btn">  <button onclick="tinhbmi()">Tính</button></div>
+            </div>
+          
+        </div>
+          
+   
+
+    <script>
+        function tinhbmi() {
+            let kg = parseFloat(document.getElementById('kg').value)
+            let chieuCao = parseFloat(document.getElementById('chieuCao').value)
+
+            if (isNaN(chieuCao) || chieuCao < 0) {
+                alert("vui lòng không để trống || chiều cao không hợp lệ")
+                return;
+            }
+
+            if (isNaN(kg) || kg < 0) {
+                alert("vui lòng không để trống || kg không hợp lệ")
+                return;
+            }
+
+            let bmi = kg / (chieuCao * chieuCao)
+            bmi = bmi.toFixed(2);
+            document.getElementById('kq').value = bmi
+
+
+            if (bmi < 18.5) document.getElementsByClassName('anh')[0].src = 'bmi/thieucan.jpg'
+            else if (bmi < 25) document.getElementsByClassName('anh')[0].src = 'bmi/best.jpg'
+            else if (bmi < 30) document.getElementsByClassName('anh')[0].src = 'bmi/bel1.jpg'
+            else document.getElementsByClassName('anh')[0].src = 'bmi/mup.jpg'
+
+        }
+
+    </script>
+</body>
+
+</html>
