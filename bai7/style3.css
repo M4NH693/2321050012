@@ -1,17 +1,100 @@
-.text1{
+header{
     display: flex;
     justify-content: center;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+    height: 500px;
+    padding: 40px;
+}
+.tda{
+    font-size: 30px;
+    color: blue;
+}
+
+.to{
+    font-size: 25px;
+}
+.tat{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 main{
+     display: flex;
+    justify-content: center; 
+}
+
+
+.text1{
     display: flex;
     justify-content: center;
 }
-table ,tr,td{
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 60px;
+.f{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1 input{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+}
+
+.date{
+    display: flex;
+    justify-content: space-between;
+}
+.label1{
+    margin-top: 15px;
+}
+select{
+    width: 130px;
+    height: 30px;
+}
+
+.label2{
+    margin-top: 15px;
+}
+
+.gender{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.gender div{
+    border: 1px solid gray;
+    border-radius: 5px;
+    /* padding-left:20px ;
+    padding-right:20px ;
+    padding-top: 10px;
+    padding-bottom:10px ; */
+    width: 120px;
+    height: 20px;
+}
+
+.sdt p input{
+    width: 430px;
+    height: 30px;
+}
+
+.buttom1{
+    display: flex;
+    justify-content: center;
+}
+.bt{
+    display: flex;
+    justify-content: center;
+}
+button{
+    width: 120px;
     height: 40px;
+    background-color: green;
+    border-radius: 10px;
 }
 
 
