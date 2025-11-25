@@ -1,42 +1,57 @@
-<!-- the div de chia khoi(bo cuc) -->
- <!-- sapn dung de viet text ngan -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>day la web bat dau</title>
-        </head>
-    <body>
-        <!-- the dinh dang de muc -->
-        <h1>Chao mung ban den voi trang web cua toi</h1>
-        <p>Day la trang web dau tien cua toi</p>
-        <p>Toi rat vui khi ban den day</p>
-        <p>Cam on cac con vo da ghe tham</p>
-        <span>
-            nam thich an cut va uong nuoc dua
-        </span>
-        <div>day la mot div</div>
-        <b>day la mot chu viet dam</b>
-        <i>day la mot chu viet nghieng  </i>
-        <u> day la mot chu viet dam </u>
-        <b><u><i>chu viet</b></u></i>
-        <br>
-        <font color="red">day la chu do</font>
-        <font face="Arial" size="5">day la chu Arial</font>
-        <br>
-        <font color ="green" size="4" face="Arial">day la chu xanh</font>  
-        <!-- the dinh dang chi so tren sup -->
-         x<sup>2</sup> + 2x + 1 = 0
-        <br>
-        <!-- the dinh dang chi so duoi sub -->
-        E = mc<sub>2</sub>
-        <img src="phatdut.JPG" alt="Hinh anh minh hoa" width="300" height="200">
-        <a href="https://www.google.com">bam vao day se co bat ngo</a>
-        <a href="../bai2/index.html"></a>
-        <ul>
-                        <li>Sản Phẩm 1</li>
-                        <li>Sản Phẩm 2</li>
-                        <li>Sản Phẩm 3</li>
-                    </ul>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
 
+    </style>
+
+
+    <div class="tabs">
+    <button class="tab-btn" data-tab="tab1">Tab 1</button>
+    <button class="tab-btn" data-tab="tab2">Tab 2</button>
+    <button class="tab-btn" data-tab="tab3">Tab 3</button>
+</div>
+
+<div class="tab-content" id="tab1">Nội dung tab 1</div>
+<div class="tab-content" id="tab2">Nội dung tab 2</div>
+<div class="tab-content" id="tab3">Nội dung tab 3</div>
+
+
+<script>
+    const buttons = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", async () => {
+        const tabId = btn.dataset.tab;
+        const content = document.getElementById(tabId);
+
+        // Ẩn tất cả trước
+        contents.forEach(c => c.classList.remove("active"));
+
+        // Nếu tab có data-src thì tải nội dung
+        if (content.dataset.src && !content.dataset.loaded) {
+            const res = await fetch(content.dataset.src);
+            const html = await res.text();
+            content.innerHTML = html;
+            content.dataset.loaded = "true"; // Đánh dấu đã load để không load lại
+        }
+
+        content.classList.add("active");
+    });
+});
+
+</script>
+</body>
 </html>
