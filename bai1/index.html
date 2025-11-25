@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <style>
-        .tab-content {
-  display: none;
-}
-.tab-content.active {
-  display: block;
-}
+    <h1>tính điểm</h1>
 
-    </style>
+    <div>
+        <label for="">nhập điểm A: </label>
+        <input type="text" id="A">
+    </div>
 
+    <div>
+        <label for="">nhập điểm B: </label>
+        <input type="text" id="B">
+    </div>
 
-    <div class="tabs">
-    <button class="tab-btn" data-tab="tab1">Tab 1</button>
-    <button class="tab-btn" data-tab="tab2">Tab 2</button>
-    <button class="tab-btn" data-tab="tab3">Tab 3</button>
-</div>
+    <div>
+        <label for="">nhập điểm C: </label>
+        <input type="text" id="C">
+    </div>
 
-<div class="tab-content" id="tab1">Nội dung tab 1</div>
-<div class="tab-content" id="tab2">Nội dung tab 2</div>
-<div class="tab-content" id="tab3">Nội dung tab 3</div>
+    <div>
+        <label for="">Kết quả : </label>
+        <input id="ketqua">
+        <button onclick="tinhdiem()">tính</button>
+    </div>
 
+    <div>
+        <label for="">Quy đổi sang chữ</label>
+        <input type="text" id="quydoi">
+    </div>
+    <script>
+        function tinhdiem() {
+            let A = parseFloat(document.getElementById('A').value)
+            let B = parseFloat(document.getElementById('B').value)
+            let C = parseFloat(document.getElementById('C').value)
 
-<script>
-    const buttons = document.querySelectorAll(".tab-btn");
-const contents = document.querySelectorAll(".tab-content");
+            if (isNaN(A) || isNaN(B) || isNaN(C)) {
+                alert("vui lòng nhập đủ đầu vào!")
+                return;
+            }
 
-buttons.forEach(btn => {
-    btn.addEventListener("click", async () => {
-        const tabId = btn.dataset.tab;
-        const content = document.getElementById(tabId);
+            let diem = A * 0.6 + B * 0.3 + C * 0.1;
+            document.getElementById('ketqua').value = diem;
 
-        // Ẩn tất cả trước
-        contents.forEach(c => c.classList.remove("active"));
+            if(A <= 10 && B <= 10 && C <= 10){
+                 if (diem >= 8 && diem <= 10) {
+                document.getElementById("quydoi").value = "A";
+            } else if (diem >= 7 && diem < 8) {
+                 document.getElementById("quydoi").value = "B";
 
-        // Nếu tab có data-src thì tải nội dung
-        if (content.dataset.src && !content.dataset.loaded) {
-            const res = await fetch(content.dataset.src);
-            const html = await res.text();
-            content.innerHTML = html;
-            content.dataset.loaded = "true"; // Đánh dấu đã load để không load lại
+            } else if (diem >= 5 && diem < 7) {
+                 document.getElementById("quydoi").value = "C";
+
+            } else if (diem >= 4 && diem < 5) {
+                document.getElementById("quydoi").value = "D";
+            } else {
+                document.getElementById("quydoi").value = "wrongbibi";
+            }
+            }else{
+
+            }
         }
 
-        content.classList.add("active");
-    });
-});
 
-</script>
+    </script>
 </body>
+
 </html>
